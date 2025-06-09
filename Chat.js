@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 
-const socket = io('https://sukasuka.onrender.com/');
+const socket = io(process.env.REACT_APP_BACKEND_URL);
 
 export default function Chat() {
   const [input, setInput] = useState('');
